@@ -1,0 +1,94 @@
+Year,Position,Constituency,,,,,,,# of tossup,# of tilt D,# of tilt R,# of lean D,# of lean R,# of likely D,# of likely R,# of safe D,# of safe R,Margin (%),,Margin (Number)
+2020,Senate,Alabama,Lean R,Lean R,Likely R,Likely R,Lean R,Likely R,0,0,0,0,3,0,3,0,0,20.36%,R,-20.36
+2020,Senate,Alaska,Lean R,Lean R,Lean R,Lean R,Lean R,Lean R,0,0,0,0,6,0,0,0,0,12.70%,R,-12.7
+2020,Senate,"Arizona
+(special)",Lean D,Tilt D,Lean D,Lean D,Lean D,Tossup,1,1,0,4,0,0,0,0,0,2.35%,,2.35
+2020,Senate,Arkansas,Safe R,Safe R,Safe R,Safe R,Solid R,Safe R,0,0,0,0,0,0,0,0,6,33.06%,R,-33.06
+2020,Senate,Colorado,Lean D,Lean D,Likely D,Likely D,Lean D,Lean D,0,0,0,4,0,2,0,0,0,9.32%,D,9.32
+2020,Senate,Delaware,Safe D,Safe D,Safe D,Safe D,Solid D,Safe D,0,0,0,0,0,0,0,6,0,21.54%,D,21.54
+2020,Senate,"Georgia
+(regular)",Tossup,Tossup,Tossup,Tossup,Tossup,Tossup,6,0,0,0,0,0,0,0,0,1.23%,D,1.23
+2020,Senate,"Georgia
+(special)",Tossup,Tossup,Tossup,Tossup,Lean R,Lean R,4,0,0,0,2,0,0,0,0,2.08%,D,2.08
+2020,Senate,Idaho,Safe R,Safe R,Safe R,Safe R,Solid R,Safe R,0,0,0,0,0,0,0,0,6,29.38%,R,-29.38
+2020,Senate,Illinois,Safe D,Safe D,Safe D,Safe D,Solid D,Safe D,0,0,0,0,0,0,0,6,0,16.07%,D,16.07
+2020,Senate,Iowa,Tossup,Tossup,Lean R,Tossup,Tossup,Tossup,5,0,0,0,1,0,0,0,0,6.59%,R,-6.59
+2020,Senate,Kansas,Lean R,Tilt R,Lean R,Lean R,Lean R,Lean R,0,0,1,0,5,0,0,0,0,11.44%,R,-11.44
+2020,Senate,Kentucky,Likely R,Safe R,Likely R,Safe R,Likely R,Likely R,0,0,0,0,0,0,4,0,2,19.53%,R,-19.53
+2020,Senate,Louisiana,Safe R,Safe R,Safe R,Safe R,Solid R,Safe R,0,0,0,0,0,0,0,0,6,40.30%,R,-40.3
+2020,Senate,Maine,Tossup,Tilt D,Lean D,Tossup,Tossup,Tossup,4,1,0,1,0,0,0,0,0,8.60%,R,-8.6
+2020,Senate,Massachusetts,Safe D,Safe D,Safe D,Safe D,Solid D,Safe D,0,0,0,0,0,0,0,6,0,33.11%,D,33.11
+2020,Senate,Michigan,Lean D,Lean D,Lean D,Lean D,Lean D,Tossup,1,0,0,5,0,0,0,0,0,1.69%,D,1.69
+2020,Senate,Minnesota,Safe D,Safe D,Likely D,Likely D,Likely D,Tossup,1,0,0,0,0,3,0,2,0,5.25%,D,5.25
+2020,Senate,Mississippi,Likely R,Safe R,Likely R,Safe R,Likely R,Lean R,0,0,0,0,1,0,3,0,2,9.98%,R,-9.98
+2020,Senate,Montana,Tossup,Tossup,Lean R,Lean R,Tossup,Tossup,4,0,0,0,2,0,0,0,0,10.02%,R,-10.02
+2020,Senate,Nebraska,Safe R,Safe R,Safe R,Safe R,Solid R,Safe R,0,0,0,0,0,0,0,0,6,38.31%,R,-38.31
+2020,Senate,New Hampshire,Safe D,Safe D,Likely D,Safe D,Likely D,Lean D,0,0,0,1,0,2,0,3,0,15.65%,D,15.65
+2020,Senate,New Jersey,Safe D,Safe D,Safe D,Safe D,Solid D,Likely D,0,0,0,0,0,1,0,5,0,16.31%,D,16.31
+2020,Senate,New Mexico,Safe D,Safe D,Likely D,Safe D,Likely D,Lean D,0,0,0,1,0,2,0,3,0,6.11%,D,6.11
+2020,Senate,North Carolina,Tossup,Tilt D,Lean D,Tossup,Tossup,Tossup,4,1,0,1,0,0,0,0,0,1.75%,R,-1.75
+2020,Senate,Oklahoma,Safe R,Safe R,Safe R,Safe R,Solid R,Safe R,0,0,0,0,0,0,0,0,6,30.16%,R,-30.16
+2020,Senate,Oregon,Safe D,Safe D,Safe D,Safe D,Solid D,Safe D,0,0,0,0,0,0,0,6,0,17.59%,D,17.59
+2020,Senate,Rhode Island,Safe D,Safe D,Safe D,Safe D,Solid D,Safe D,0,0,0,0,0,0,0,6,0,33.12%,D,33.12
+2020,Senate,South Carolina,Tossup,Tilt R,Lean R,Lean R,Lean R,Tossup,2,0,1,0,3,0,0,0,0,10.27%,R,-10.27
+2020,Senate,South Dakota,Safe R,Safe R,Safe R,Safe R,Solid R,Safe R,0,0,0,0,0,0,0,0,6,31.47%,R,-31.47
+2020,Senate,Tennessee,Safe R,Safe R,Safe R,Safe R,Solid R,Likely R,0,0,0,0,0,0,1,0,5,27.04%,R,-27.04
+2020,Senate,Texas,Lean R,Lean R,Lean R,Lean R,Lean R,Lean R,0,0,0,0,6,0,0,0,0,9.64%,R,-9.64
+2020,Senate,Virginia,Safe D,Safe D,Safe D,Safe D,Solid D,Likely D,0,0,0,0,0,1,0,5,0,12.08%,D,12.08
+2020,Senate,West Virginia,Safe R,Safe R,Safe R,Safe R,Solid R,Safe R,0,0,0,0,0,0,0,0,6,43.28%,R,-43.28
+2020,Senate,Wyoming,Safe R,Safe R,Safe R,Safe R,Solid R,Safe R,0,0,0,0,0,0,0,0,6,46.09%,R,-46.09
+2018,Senate,Arizona,Tilt D,Lean D,Tossup,Tossup,Tossup,Tossup,4,1,0,1,0,0,0,0,0,2.34%,D,2.34
+2018,Senate,Connecticut,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,20.18%,D,20.18
+2018,Senate,Delaware,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,22.13%,D,22.13
+2018,Senate,Florida,Tilt D,Lean D,Tossup,Tossup,Tossup,Tossup,4,1,0,1,0,0,0,0,0,0.12%,R,-0.12
+2018,Senate,Hawaii,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,42.30%,D,42.3
+2018,Senate,Indiana,Tossup,Lean R,Tossup,Tossup,Tossup,Tossup,5,0,0,0,1,0,0,0,0,5.89%,R,-5.89
+2018,Senate,Maine,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,19.08%,D,19.08
+2018,Senate,Maryland,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,34.55%,D,34.55
+2018,Senate,Massachusetts,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,24.16%,D,24.16
+2018,Senate,Michigan,Safe D,Safe D,Likely D,Lean D,Safe D,Likely D,0,0,0,1,0,2,0,3,0,6.51%,D,6.51
+2018,Senate,"Minnesota
+(Regular)",Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,24.10%,D,24.1
+2018,Senate,"Minnesota
+(Special)",Likely D,Likely D,Lean D,Lean D,Likely D,Likely D,0,0,0,2,0,4,0,0,0,10.62%,D,10.62
+2018,Senate,"Mississippi
+(Regular)",Safe R,Safe R,Safe R,Safe R,Safe R,Safe R,0,0,0,0,0,0,0,0,6,19.02%,R,-19.02
+2018,Senate,"Mississippi
+(Special)",Safe R,Likely R,Lean R,Likely R,Likely R,Likely R,0,0,0,0,1,0,4,0,1,7.26%,R,-7.26
+2018,Senate,Missouri,Tilt R,Lean R,Tossup,Tossup,Tossup,Tossup,4,0,1,0,1,0,0,0,0,5.81%,R,-5.81
+2018,Senate,Montana,Tilt D,Lean D,Tossup,Tossup,Tossup,Lean D,3,1,0,2,0,0,0,0,0,3.55%,D,3.55
+2018,Senate,Nebraska,Safe R,Safe R,Safe R,Safe R,Safe R,Safe R,0,0,0,0,0,0,0,0,6,19.06%,R,-19.06
+2018,Senate,Nevada,Tilt D,Lean D,Tossup,Tossup,Tossup,Tossup,4,1,0,1,0,0,0,0,0,5.03%,D,5.03
+2018,Senate,New Jersey,Likely D,Likely D,Tossup,Lean D,Lean D,Lean D,1,0,0,3,0,2,0,0,0,11.18%,D,11.18
+2018,Senate,New Mexico,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,23.56%,D,23.56
+2018,Senate,New York,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,34.00%,D,34
+2018,Senate,North Dakota,Lean R,Lean R,Lean R,Lean R,Lean R,Lean R,0,0,0,0,6,0,0,0,0,10.84%,R,-10.84
+2018,Senate,Ohio,Safe D,Likely D,Likely D,Lean D,Likely D,Likely D,0,0,0,1,0,4,0,1,0,6.85%,D,6.85
+2018,Senate,Pennsylvania,Safe D,Safe D,Likely D,Likely D,Safe D,Likely D,0,0,0,0,0,3,0,3,0,13.13%,D,13.13
+2018,Senate,Rhode Island,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,23.11%,D,23.11
+2018,Senate,Tennessee,Lean R,Lean R,Tossup,Tossup,Lean R,Lean R,2,0,0,0,4,0,0,0,0,10.79%,R,-10.79
+2018,Senate,Texas,Likely R,Lean R,Tossup,Lean R,Lean R,Lean R,1,0,0,0,4,0,1,0,0,2.57%,R,-2.57
+2018,Senate,Utah,Safe R,Safe R,Safe R,Safe R,Safe R,Safe R,0,0,0,0,0,0,0,0,6,31.68%,R,-31.68
+2018,Senate,Vermont,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,39.93%,D,39.93
+2018,Senate,Virginia,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,16.00%,D,16
+2018,Senate,Washington,Safe D,Safe D,Safe D,Safe D,Safe D,Safe D,0,0,0,0,0,0,0,6,0,16.87%,D,16.87
+2018,Senate,West Virginia,Tilt D,Lean D,Lean D,Tossup,Lean D,Lean D,1,1,0,4,0,0,0,0,0,3.31%,D,3.31
+2018,Senate,Wisconsin,Safe D,Likely D,Likely D,Lean D,Likely D,Likely D,0,0,0,1,0,4,0,1,0,10.84%,D,10.84
+2018,Senate,Wyoming,Safe R,Safe R,Safe R,Safe R,Safe R,Safe R,0,0,0,0,0,0,0,0,6,36.86%,R,-36.86
+2016,Senate,Alaska,Likely R,Safe R,Safe R,Safe R,Safe R,Safe R,0,0,0,0,0,0,1,0,5,15.20%,R,-15.2
+2016,Senate,Arizona,Lean R,Likely R,Likely R,Safe R,Lean R,Safe R,0,0,0,0,2,0,2,0,2,13.00%,R,-13
+2016,Senate,Colorado,Likely D,Safe D,Safe D,Safe D,Lean D,Likely D,0,0,0,1,0,2,0,3,0,5.70%,D,5.7
+2016,Senate,Florida,Lean R,Lean R,Lean R,Lean R,Tossup,Lean R,1,0,0,0,5,0,0,0,0,7.70%,R,-7.7
+2016,Senate,Georgia,Likely R,Safe R,Safe R,Safe R,Likely R,Safe R,0,0,0,0,0,0,2,0,4,13.80%,R,-13.8
+2016,Senate,Illinois,Lean D,Likely D,Lean D,Safe D,Likely D,Safe D,0,0,0,2,0,2,0,2,0,15.10%,D,15.1
+2016,Senate,Indiana,Tossup,Lean R,Tossup,Tossup,Tossup,Lean R,4,0,0,0,2,0,0,0,0,9.70%,R,-9.7
+2016,Senate,Iowa,Likely R,Safe R,Safe R,Safe R,Safe R,Safe R,0,0,0,0,0,0,1,0,5,24.40%,R,-24.4
+2016,Senate,Kentucky,Safe R,Safe R,Safe R,Safe R,Likely R,Safe R,0,0,0,0,0,0,1,0,5,14.50%,R,-14.5
+2016,Senate,Louisiana,Safe R,Likely R,Safe R,Safe R,Likely R,Likely R,0,0,0,0,0,0,3,0,3,21.30%,R,-21.3
+2016,Senate,Missouri,Tossup,Lean R,Tossup,Lean R,Tossup,Tossup,4,0,0,0,2,0,0,0,0,2.80%,R,-2.8
+2016,Senate,Nevada,Tossup,Lean D,Tossup,Lean D,Tossup,Tossup,4,0,0,2,0,0,0,0,0,2.40%,D,2.4
+2016,Senate,New Hampshire,Tossup,Lean D,Tossup,Lean D,Tossup,Tossup,4,0,0,2,0,0,0,0,0,0.10%,D,0.1
+2016,Senate,North Carolina,Tossup,Lean R,Tossup,Tossup,Tossup,Tossup,5,0,0,0,1,0,0,0,0,5.70%,R,-5.7
+2016,Senate,Ohio,Lean R,Safe R,Likely R,Safe R,Safe R,Safe R,0,0,0,0,1,0,1,0,4,20.90%,R,-20.9
+2016,Senate,Pennsylvania,Tossup,Lean D,Tossup,Lean D,Tossup,Lean D,3,0,0,3,0,0,0,0,0,1.40%,R,-1.4
+2016,Senate,Wisconsin,Tossup,Lean D,Tilt D,Lean D,Tossup,Lean D,2,1,0,3,0,0,0,0,0,3.40%,R,-3.4
