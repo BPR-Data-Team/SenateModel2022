@@ -11,7 +11,7 @@ results2018 <- senate_sheets %>%
   range_read(sheet = 3)
 houseresults2018 <- senate_sheets %>%
   range_read(sheet = 4)
-days_away <- 40
+days_away <- 60
 
 #IMPORTING IN PAST RATINGS
 ratings2014 <- read_tsv(url("https://raw.githubusercontent.com/fivethirtyeight/data/master/pollster-ratings/2014/pollster-ratings.tsv")) %>%
@@ -52,28 +52,28 @@ currentsenatepolls <- read.csv(url("https://projects.fivethirtyeight.com/polls-p
 genballotpolls <- read.csv(url("https://projects.fivethirtyeight.com/polls-page/data/generic_ballot_polls.csv"))
 prespolls2020 
 
-
+#function to weigh polls based on how far away they were created
 pollweights <- function(faraway) {
-  return(1 / (1 + exp(faraway - 20)))
+  return(1 / (1 + exp(faraway - 30)))
 }
 
 #AVERAGE OF CURRENT SENATE ELECTIONS, WITHOUT OKLAHOMA SPECIAL
 currentsenatepollsnooklahoma <- currentsenatepolls %>%
   #only takes polls within 30 days of the election, with grades of C and above
-  filter((Sys.Date() - as.Date(end_date, "%m/%d/%y")) < days_away & !(fte_grade %in% c("C/D", "D"))) %>%
+  filter((as.Date("11/08/22") - as.Date(end_date, "%m/%d/%y")) < days_away & !(fte_grade %in% c("C/D", "D"))) %>%
   #weighing every poll according to how far away it is
-  mutate(weights = pollweights(as.numeric(Sys.Date() - as.Date(end_date, "%m/%d/%y")))) %>%
+  mutate(weights = pollweights(as.numeric(as.Date("11/08/22") - as.Date(end_date, "%m/%d/%y")))) %>%
   #taking out Oklahoma special
-  filter(!(candidate_name %in% c("Kendra Horn", "Markwayne Mullin", "Robert Murphy", "Ray Woods") | pollster_rating_name == "Center Street PAC")) %>%
+  filter(!(candidate_name %in% c("Kendra Horn", "Markwayne Mullin", "Robert Murphy", "Ray Woods"))) %>%
+  filter(!(partisan %in% c("DEM", "REP") & !(pollster_rating_name %in% masterratings$Pollster))) %>%
   #getting the sum of percents for each party for every race
   group_by(poll_id, pollster_rating_name, state, population, party, end_date, weights) %>%
   summarize(pct = sum(pct)) %>%
   pivot_wider(names_from = party, values_from = pct) %>%
   #getting margin
   mutate(margin = case_when(
-    state == "Utah" ~ REP - IND,
-    TRUE ~ DEM - REP
-  ))  %>%
+    state == "Utah" ~ IND - REP,
+    TRUE ~ DEM - REP))  %>%
   select("poll_id", "pollster_rating_name", "state", "end_date", "population", "margin", "weights") %>%
   # #getting the best group of voters for every poll
   mutate(population = case_when(
@@ -88,7 +88,9 @@ currentsenatepollsnooklahoma <- currentsenatepolls %>%
   left_join(masterratings, by = c("pollster_rating_name" = "Pollster")) %>%
   replace_na(list(Mean.Reverted.Bias = 0)) %>%
   #getting margin - bias for each state
-  mutate(result = margin - Mean.Reverted.Bias) %>%
+  mutate(result = case_when(
+    state == "Utah" ~ margin,
+    TRUE ~ margin - Mean.Reverted.Bias)) %>%
   #getting polling average for each state
   group_by(state) %>%
   summarize(margin = weighted.mean(result, weights))
@@ -96,11 +98,11 @@ currentsenatepollsnooklahoma <- currentsenatepolls %>%
 #AVERAGE OF CURRENT OKLAHOMA SPECIAL ELECTIONS
 okspecial <- currentsenatepolls %>%
   #only takes polls within 30 days of the election, with grades of C and above
-  filter((Sys.Date() - as.Date(end_date, "%m/%d/%y")) < days_away & !(fte_grade %in% c("C/D", "D"))) %>%
+  filter((as.Date("11/08/22") - as.Date(end_date, "%m/%d/%y")) < days_away & !(fte_grade %in% c("C/D", "D"))) %>%
   #taking out Oklahoma special
   filter(candidate_name %in% c("Kendra Horn", "Markwayne Mullin", "Robert Murphy", "Ray Woods")) %>%
   #weighing every poll according to how far away it is
-  mutate(weights = pollweights(as.numeric(Sys.Date() - as.Date(end_date, "%m/%d/%y")))) %>%
+  mutate(weights = pollweights(as.numeric(as.Date("11/08/22") - as.Date(end_date, "%m/%d/%y")))) %>%
   group_by(poll_id, pollster_rating_name, state, population, party, end_date, weights) %>%
   summarize(pct = sum(pct)) %>%
   pivot_wider(names_from = party, values_from = pct) %>%
@@ -123,9 +125,9 @@ okspecial <- currentsenatepolls %>%
 #ALASKA POLLING
 alaskapolls <- currentsenatepolls %>%
   #only takes polls within 40 days of the election, with grades of C and above, from the state Alaska
-  filter(state == "Alaska" & (Sys.Date() - as.Date(end_date, "%m/%d/%y")) < days_away & !(fte_grade %in% c("C/D", "D"))) %>%
+  filter(state == "Alaska" & (as.Date("11/08/22") - as.Date(end_date, "%m/%d/%y")) < days_away & !(fte_grade %in% c("C/D", "D"))) %>%
   #weighing every poll according to how far away it is
-  mutate(weights = pollweights(as.numeric(Sys.Date() - as.Date(end_date, "%m/%d/%y")))) %>%
+  mutate(weights = pollweights(as.numeric(as.Date("11/08/22") - as.Date(end_date, "%m/%d/%y")))) %>%
   group_by(poll_id, pollster_rating_name, state, population, candidate_name, end_date, weights) %>%
   summarize(pct = max(pct)) %>%
   pivot_wider(names_from = candidate_name, values_from = pct) %>%
@@ -143,8 +145,9 @@ alaskapolls <- currentsenatepolls %>%
   filter(population == max(population)) %>%
   group_by(state) %>%
   summarize(margin = weighted.mean(margin, weights)) %>%
-  mutate(state = "Alaska")
+  mutate(state = "Alaska") 
 
+#Utah current polls:
 
 #CURRENT SENATE POLLS
 currentpolls <- bind_rows(currentsenatepollsnooklahoma, okspecial) %>%
@@ -154,9 +157,10 @@ currentpolls <- bind_rows(currentsenatepollsnooklahoma, okspecial) %>%
 #GEN BALLOT POLLS
 genballotpolls <- genballotpolls %>%
   #only takes polls within 30 days of the election, with grades of C and above
-  filter((Sys.Date() - as.Date(end_date, "%m/%d/%y")) < days_away & !(fte_grade %in% c("C/D", "D", "D-", "D+", "D/F", "F"))) %>%
+  filter((as.Date("11/08/22") - as.Date(end_date, "%m/%d/%y")) < days_away & !(fte_grade %in% c("C/D", "D", "D-", "D+", "D/F", "F"))) %>%
+  filter(!(partisan %in% c("DEM", "REP") & !(pollster_rating_name %in% masterratings$Pollster))) %>%
   #weighing every poll according to how far away it is
-  mutate(weights = pollweights(as.numeric(Sys.Date() - as.Date(end_date, "%m/%d/%y")))) %>%
+  mutate(weights = pollweights(as.numeric(as.Date("11/08/22") - as.Date(end_date, "%m/%d/%y")))) %>%
   #getting margin
   mutate(margin = dem - rep)  %>%
   select("poll_id", "pollster_rating_name", "end_date", "population", "margin", "weights") %>%
@@ -175,7 +179,7 @@ genballotpolls <- genballotpolls %>%
   #getting margin - bias for each state
   mutate(result = margin - Mean.Reverted.Bias)
 
-genballotresult <- weighted.mean(genballotresult$margin, genballotresult$weights)
+genballotresult <- weighted.mean(genballotpolls$result, genballotpolls$weights)
 
 #AVERAGE OF 2020 ELECTIONS
 pres2020 <- prespolls2020 %>%
@@ -370,10 +374,12 @@ poll_error <- states %>%
   left_join(error2018, by = c("State" = "state")) %>%
   inner_join(error2020, by = c("State" = "state"))
 
+
+#if a state doesn't have polling error for 2018, make it the average of 2016 and 2020 -- only happens for HI, LA, OK
 poll_error[is.na(poll_error$error2018), 3] <- (poll_error[is.na(poll_error$error2018), 2] + poll_error[is.na(poll_error$error2018), 4])/2
 
 #adding a row for Oklahoma (special) that is the same as Oklahoma
 poll_error <- poll_error %>%
   add_row(State = "Oklahoma (special)", error2016 = -13.3297360, error2018 = -10.3271441, error2020 = -7.32455232)
   
-  
+
